@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DarkTraceX - Cybersecurity Redefined</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0d1117, #1f2937);
+      color: #e5e7eb;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      border-bottom: 1px solid #2d3748;
+    }
+
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #00ffcc;
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #e5e7eb;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffcc;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 4rem;
+      background: linear-gradient(to right, #00ffcc, #007cf0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      color: #a1a1aa;
+    }
+
+    .cta {
+      margin-top: 2rem;
+    }
+
+    .cta a {
+      text-decoration: none;
+      background: #00ffcc;
+      color: #0d1117;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background: #00ddb3;
+    }
+
+    section.features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+      background: #111827;
+    }
+
+    .feature {
+      padding: 2rem;
+      background: #1f2937;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 255, 204, 0.1);
+    }
+
+    .feature h3 {
+      color: #00ffcc;
+      margin-bottom: 1rem;
+    }
+
+    .feature p {
+      color: #cbd5e1;
+    }
+
+    section.contact {
+      padding: 4rem 2rem;
+      background: #0f172a;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #1f2937;
+      padding: 2rem;
+      border-radius: 12px;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      color: #00ffcc;
+      margin-bottom: 1rem;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 6px;
+      background: #374151;
+      color: #fff;
+    }
+
+    .contact-form button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.75rem;
+      background: #00ffcc;
+      color: #0d1117;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #00ddb3;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      background: #0f172a;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DarkTraceX</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#features">Features</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Next-Gen Cybersecurity</h1>
+    <p>AI-Powered, Quantum-Resistant, Human-Centered. Protecting your digital frontier with unmatched precision.</p>
+    <div class="cta">
+      <a href="#contact">Request a Demo</a>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="feature">
+      <h3>Autonomous Threat Hunting</h3>
+      <p>Detect zero-day exploits and malicious behavior in real-time with our AI-driven engine.</p>
+    </div>
+    <div class="feature">
+      <h3>Quantum-Ready Encryption</h3>
+      <p>Future-proof your data using next-gen post-quantum cryptographic algorithms.</p>
+    </div>
+    <div class="feature">
+      <h3>Behavioral Analytics</h3>
+      <p>Monitor and adapt to user behavior to detect anomalies and insider threats.</p>
+    </div>
+    <div class="feature">
+      <h3>Global Threat Intelligence</h3>
+      <p>Leverage a global database of threat indicators for proactive defense strategies.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 DarkTraceX. All rights reserved.
+  </footer>
+</body>
+</html>
