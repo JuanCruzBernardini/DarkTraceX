@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DarkTraceX - Cybersecurity Redefined</title>
+  
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -25,6 +26,7 @@
       align-items: center;
       padding: 2rem;
       border-bottom: 1px solid #2d3748;
+      animation: fadeDown 1s ease-out;
     }
 
     .logo {
@@ -53,6 +55,7 @@
       height: 90vh;
       text-align: center;
       padding: 2rem;
+      animation: fadeUp 1s ease-out;
     }
 
     .hero h1 {
@@ -94,6 +97,7 @@
       gap: 2rem;
       padding: 4rem 2rem;
       background: #111827;
+      animation: fadeUp 1.2s ease-out;
     }
 
     .feature {
@@ -101,7 +105,14 @@
       background: #1f2937;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 255, 204, 0.1);
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideIn 0.8s forwards;
     }
+
+    .feature:nth-child(2) { animation-delay: 0.2s; }
+    .feature:nth-child(3) { animation-delay: 0.4s; }
+    .feature:nth-child(4) { animation-delay: 0.6s; }
 
     .feature h3 {
       color: #00ffcc;
@@ -115,6 +126,7 @@
     section.contact {
       padding: 4rem 2rem;
       background: #0f172a;
+      animation: fadeUp 1.2s ease-out;
     }
 
     .contact-form {
@@ -123,6 +135,7 @@
       background: #1f2937;
       padding: 2rem;
       border-radius: 12px;
+      animation: fadeUp 1.3s ease-out;
     }
 
     .contact-form h2 {
@@ -168,6 +181,36 @@
       text-align: center;
       background: #0f172a;
       color: #64748b;
+      animation: fadeUp 1.2s ease-out;
+    }
+
+    @keyframes fadeUp {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeDown {
+      0% {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -175,9 +218,10 @@
   <header>
     <div class="logo">DarkTraceX</div>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="#">Home</a>
       <a href="#features">Features</a>
       <a href="about.html">About</a>
+
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -191,23 +235,52 @@
   </section>
 
   <section class="features" id="features">
-    <div class="feature">
-      <h3>Autonomous Threat Hunting</h3>
-      <p>Detect zero-day exploits and malicious behavior in real-time with our AI-driven engine.</p>
-    </div>
-    <div class="feature">
-      <h3>Quantum-Ready Encryption</h3>
-      <p>Future-proof your data using next-gen post-quantum cryptographic algorithms.</p>
-    </div>
-    <div class="feature">
-      <h3>Behavioral Analytics</h3>
-      <p>Monitor and adapt to user behavior to detect anomalies and insider threats.</p>
-    </div>
-    <div class="feature">
-      <h3>Global Threat Intelligence</h3>
-      <p>Leverage a global database of threat indicators for proactive defense strategies.</p>
-    </div>
-  </section>
+  <div class="feature">
+    <h3>Autonomous Threat Hunting</h3>
+    <p>Detect zero-day exploits and malicious behavior in real-time with our AI-driven engine. DarkTraceX goes beyond traditional detection by using behavioral analysis to proactively find anomalies within your environment.</p>
+  </div>
+  <div class="feature">
+    <h3>Quantum-Ready Encryption</h3>
+    <p>Future-proof your data using next-gen post-quantum cryptographic algorithms. Ensure compliance with evolving data protection laws and long-term confidentiality for regulated industries.</p>
+  </div>
+  <div class="feature">
+    <h3>Behavioral Analytics</h3>
+    <p>Continuously monitor and adapt to user behavior to detect insider threats. Align with standards like ISO 27001 and NIST by enabling full traceability of user actions and system responses.</p>
+  </div>
+  <div class="feature">
+    <h3>Global Threat Intelligence</h3>
+    <p>Use global threat feeds to anticipate and neutralize attacks. Maintain compliance readiness with automated classification of threats and integration into governance dashboards.</p>
+  </div>
+  <div class="feature">
+    <h3>Compliance & Governance Hub</h3>
+    <p>Centralize risk and compliance management. Map threats and events to regulatory frameworks (GDPR, HIPAA, PCI-DSS) with audit trails, automated checks, and customizable alerts.</p>
+  </div>
+  <div class="feature">
+  <h3>Risk Management</h3>
+  <p>Identify, assess, and mitigate potential threats across your organization. Our risk engine supports compliance audits and security governance by prioritizing vulnerabilities based on criticality and business impact.</p>
+</div>
+<div class="feature">
+  <h3>Integrated Tools & Trusted Partners</h3>
+  <p>Connect your existing security stack with DarkTraceX and scale operations through partnerships with top-tier vendors and threat intelligence providers for a complete defense strategy.</p>
+</div>
+
+<div class="feature">
+  <h3>Advanced Antivirus & Monitoring</h3>
+  <p>Ensure real-time protection and post-breach defense with next-gen antivirus, behavioral-based detection, and response automation tailored to enterprise or SMB infrastructure.</p>
+</div>
+
+<div class="feature">
+  <h3>Ethical Hacking & Red Teaming</h3>
+  <p>Our experts simulate real-world attack scenarios to uncover system weaknesses. Get detailed reports, proof of concept exploits, and strategic mitigation planning for long-term security resilience.</p>
+</div>
+<div class="feature">
+  <h3>Cybersecurity Awareness Training</h3>
+  <p>Educate your team to be the first line of defense. Our awareness courses help employees detect phishing attempts, manage sensitive data securely, and adopt security best practices—aligning with compliance frameworks like ISO 27001 and GDPR.</p>
+</div>
+
+
+</section>
+
 
   <section class="contact" id="contact">
     <div class="contact-form">

@@ -17,6 +17,7 @@
       background: linear-gradient(135deg, #0d1117, #1f2937);
       color: #e5e7eb;
       padding: 2rem;
+      overflow-x: hidden;
     }
 
     header {
@@ -24,6 +25,7 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 3rem;
+      animation: fadeDown 1s ease-out;
     }
 
     .logo {
@@ -48,6 +50,7 @@
       text-align: center;
       color: #00ffcc;
       margin: 2rem 0 1rem;
+      animation: fadeUp 1s ease-out;
     }
 
     p {
@@ -55,6 +58,7 @@
       margin: 0 auto 2rem;
       line-height: 1.6;
       color: #cbd5e1;
+      animation: fadeUp 1s ease-out;
     }
 
     .team {
@@ -63,6 +67,7 @@
       justify-content: center;
       gap: 2rem;
       margin-top: 2rem;
+      animation: fadeUp 1.2s ease-out;
     }
 
     .member {
@@ -71,7 +76,14 @@
       border-radius: 10px;
       text-align: center;
       width: 220px;
+      transform: translateY(20px);
+      opacity: 0;
+      animation: slideIn 0.8s forwards;
     }
+
+    .member:nth-child(2) { animation-delay: 0.2s; }
+    .member:nth-child(3) { animation-delay: 0.4s; }
+    .member:nth-child(4) { animation-delay: 0.6s; }
 
     .member h4 {
       color: #00ffcc;
@@ -80,6 +92,35 @@
 
     .member p {
       font-size: 0.9rem;
+    }
+
+    @keyframes fadeUp {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeDown {
+      0% {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
