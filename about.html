@@ -145,6 +145,22 @@
     Our platform combines artificial intelligence, quantum-resistant encryption, and real-time threat intelligence to empower organizations of all sizes to secure their most valuable assets. We're committed to making the digital world a safer place by staying one step ahead of cybercriminals.
   </p>
 
+  <p>
+    Our services also cover critical areas such as risk management, allowing businesses to identify, assess, and mitigate potential threats before they escalate. Through a combination of compliance automation and governance frameworks, we ensure your organization remains audit-ready and aligned with international standards.
+  </p>
+
+  <p>
+    We integrate with leading cybersecurity tools and platforms, and work alongside trusted partners to offer a robust ecosystem of protection. Our advanced antivirus monitoring and threat containment tools are designed for both SMBs and enterprise-level environments.
+  </p>
+
+  <p>
+    In addition, our ethical hacking services provide proactive penetration testing and red team assessments to expose vulnerabilities before malicious actors can exploit them. We don’t just secure your perimeter—we test its limits.
+  </p>
+
+  <p>
+    As part of our mission to build a secure digital culture, we offer Cybersecurity Awareness Training Programs designed for both technical and non-technical staff. These courses help teams recognize phishing attempts, handle sensitive data responsibly, and understand their role in safeguarding the organization’s digital infrastructure.
+  </p>
+
   <div class="team">
     <div class="member">
       <h4>Juan Cruz Bernardini Muslera</h4>
@@ -163,5 +179,70 @@
       <p>Chief Cryptographer</p>
     </div>
   </div>
+<!-- Scroll Progress Bar -->
+<div id="scrollBar" style="position: fixed; top: 0; left: 0; height: 4px; background: #00ffcc; width: 0%; z-index: 1000;"></div>
+
+<!-- Back to Top Button -->
+<button id="backToTop" style="position: fixed; bottom: 30px; right: 30px; padding: 10px 20px; background-color: #00ffcc; color: #0d1117; border: none; border-radius: 6px; cursor: pointer; display: none; font-weight: bold; z-index: 1000;">↑ Top</button>
+
+
+<script>
+  // Scroll Progress
+  window.onscroll = function () {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("scrollBar").style.width = scrolled + "%";
+
+    // Show/Hide Back to Top button
+    document.getElementById("backToTop").style.display = window.scrollY > 300 ? "block" : "none";
+  };
+
+  // Scroll to Top
+  document.getElementById("backToTop").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Dynamic Title
+  const originalTitle = document.title;
+  document.addEventListener("visibilitychange", () => {
+    document.title = document.hidden ? "👀 Volvé a DarkTraceX" : originalTitle;
+  });
+
+  // Welcome Message Based on Time
+  window.addEventListener("DOMContentLoaded", () => {
+    const hour = new Date().getHours();
+    let greeting = "Welcome to DarkTraceX";
+
+    if (hour < 12) greeting = "Good morning ☀️, welcome to DarkTraceX";
+    else if (hour < 18) greeting = "Good afternoon 🔐, welcome back to DarkTraceX";
+    else greeting = "Good evening 🌙, stay safe with DarkTraceX";
+
+    const heading = document.querySelector("h2");
+    if (heading) {
+      const msg = document.createElement("p");
+      msg.textContent = greeting;
+      msg.style.color = "#00ffcc";
+      msg.style.textAlign = "center";
+      msg.style.marginBottom = "1rem";
+      heading.insertAdjacentElement("afterend", msg);
+    }
+  });
+</script>
+
+<style>
+  .light-mode {
+    background: #f8f8f8;
+    color: #111;
+  }
+  .light-mode .logo,
+  .light-mode nav a {
+    color: #007cf0;
+  }
+  .light-mode .member {
+    background: #e5e7eb;
+    color: #111;
+  }
+</style>
 </body>
 </html>

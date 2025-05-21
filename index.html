@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DarkTraceX - Cybersecurity Redefined</title>
-  
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -218,10 +217,9 @@
   <header>
     <div class="logo">DarkTraceX</div>
     <nav>
-      <a href="#">Home</a>
+      <a href="index.html">Home</a>
       <a href="#features">Features</a>
       <a href="about.html">About</a>
-
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -235,30 +233,32 @@
   </section>
 
   <section class="features" id="features">
-  <div class="feature">
-    <h3>Autonomous Threat Hunting</h3>
-    <p>Detect zero-day exploits and malicious behavior in real-time with our AI-driven engine. DarkTraceX goes beyond traditional detection by using behavioral analysis to proactively find anomalies within your environment.</p>
-  </div>
-  <div class="feature">
-    <h3>Quantum-Ready Encryption</h3>
-    <p>Future-proof your data using next-gen post-quantum cryptographic algorithms. Ensure compliance with evolving data protection laws and long-term confidentiality for regulated industries.</p>
-  </div>
-  <div class="feature">
-    <h3>Behavioral Analytics</h3>
-    <p>Continuously monitor and adapt to user behavior to detect insider threats. Align with standards like ISO 27001 and NIST by enabling full traceability of user actions and system responses.</p>
-  </div>
-  <div class="feature">
-    <h3>Global Threat Intelligence</h3>
-    <p>Use global threat feeds to anticipate and neutralize attacks. Maintain compliance readiness with automated classification of threats and integration into governance dashboards.</p>
-  </div>
-  <div class="feature">
-    <h3>Compliance & Governance Hub</h3>
-    <p>Centralize risk and compliance management. Map threats and events to regulatory frameworks (GDPR, HIPAA, PCI-DSS) with audit trails, automated checks, and customizable alerts.</p>
-  </div>
-  <div class="feature">
+    <div class="feature">
+      <h3>Autonomous Threat Hunting</h3>
+      <p>Detect zero-day exploits and malicious behavior in real-time with our AI-driven engine.</p>
+    </div>
+    <div class="feature">
+      <h3>Quantum-Ready Encryption</h3>
+      <p>Future-proof your data using next-gen post-quantum cryptographic algorithms.</p>
+    </div>
+    <div class="feature">
+      <h3>Behavioral Analytics</h3>
+      <p>Monitor and adapt to user behavior to detect anomalies and insider threats.</p>
+    </div>
+    <div class="feature">
+      <h3>Global Threat Intelligence</h3>
+      <p>Leverage a global database of threat indicators for proactive defense strategies.</p>
+    </div>
+    <div class="feature">
   <h3>Risk Management</h3>
   <p>Identify, assess, and mitigate potential threats across your organization. Our risk engine supports compliance audits and security governance by prioritizing vulnerabilities based on criticality and business impact.</p>
 </div>
+
+<div class="feature">
+  <h3>Compliance & Governance</h3>
+  <p>Automate compliance tasks and maintain alignment with standards such as ISO 27001, NIST, and GDPR. Our platform enables centralized policy control, access reviews, and regulatory reporting.</p>
+</div>
+
 <div class="feature">
   <h3>Integrated Tools & Trusted Partners</h3>
   <p>Connect your existing security stack with DarkTraceX and scale operations through partnerships with top-tier vendors and threat intelligence providers for a complete defense strategy.</p>
@@ -278,9 +278,7 @@
   <p>Educate your team to be the first line of defense. Our awareness courses help employees detect phishing attempts, manage sensitive data securely, and adopt security best practices—aligning with compliance frameworks like ISO 27001 and GDPR.</p>
 </div>
 
-
-</section>
-
+  </section>
 
   <section class="contact" id="contact">
     <div class="contact-form">
@@ -303,5 +301,61 @@
   <footer>
     &copy; 2025 DarkTraceX. All rights reserved.
   </footer>
+
+
+<!-- Scroll Progress Bar -->
+<div id="scrollBar" style="position: fixed; top: 0; left: 0; height: 4px; background: #00ffcc; width: 0%; z-index: 1000;"></div>
+
+<!-- Back to Top Button -->
+<button id="backToTop" style="position: fixed; bottom: 30px; right: 30px; padding: 10px 20px; background-color: #00ffcc; color: #0d1117; border: none; border-radius: 6px; cursor: pointer; display: none; font-weight: bold; z-index: 1000;">↑ Top</button>
+
+
+
+<script>
+  // Scroll Progress
+  window.onscroll = function () {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("scrollBar").style.width = scrolled + "%";
+
+    // Show/Hide Back to Top button
+    document.getElementById("backToTop").style.display = window.scrollY > 300 ? "block" : "none";
+  };
+
+  // Scroll to Top
+  document.getElementById("backToTop").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+ 
+
+  // Dynamic Title
+  const originalTitle = document.title;
+  document.addEventListener("visibilitychange", () => {
+    document.title = document.hidden ? "👀 Volvé a DarkTraceX" : originalTitle;
+  });
+
+  // Welcome Message Based on Time
+  window.addEventListener("DOMContentLoaded", () => {
+    const hour = new Date().getHours();
+    let greeting = "Welcome to DarkTraceX";
+
+    if (hour < 12) greeting = "Good morning ☀️, welcome to DarkTraceX";
+    else if (hour < 18) greeting = "Good afternoon 🔐, welcome back to DarkTraceX";
+    else greeting = "Good evening 🌙, stay safe with DarkTraceX";
+
+    const hero = document.querySelector(".hero p");
+    if (hero) {
+      const msg = document.createElement("p");
+      msg.textContent = greeting;
+      msg.style.color = "#00ffcc";
+      msg.style.marginTop = "1rem";
+      hero.insertAdjacentElement("afterend", msg);
+    }
+  });
+</script>
+
+
 </body>
 </html>
